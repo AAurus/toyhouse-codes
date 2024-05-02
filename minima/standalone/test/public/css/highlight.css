@@ -1,0 +1,23 @@
+#main-container {
+    background-color: #ada;
+}
+
+#brief-panel-container {
+    background-color: #a00;
+}
+
+#content-panel-container {
+    background-color: #0a0;
+}
+
+.panel-content {
+    background-color: #eee;
+}
+
+#profile-image {
+    background-color: #fff;
+}
+
+#profile-embellish {
+    background-color: #aaa;
+}

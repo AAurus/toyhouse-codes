@@ -1,0 +1,42 @@
+.info-bar {
+    width: 90%;
+    margin: auto;
+}
+
+.info-button-hollow-base {
+    height: 2.5em;
+    width: 0.05em;
+    padding: 0;
+}
+
+.info-button-hollow-edge {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 0 50% 50% 0;
+}
+
+.info-button-base {
+    margin-left: -2.55em;
+    width: 0.3em;
+    padding: 0;
+    height: 1.9em;
+}
+
+.info-button-edge {
+    margin-left: -.05em;
+    width: 1.90em;
+    height: 1.9em;
+    border-radius: 0 50% 50% 0;
+    text-indent: -0.5em;
+    text-align: right;
+}
+
+.info-row-content {
+    margin-left: .05em;
+    width: auto;
+}
+
+.info-row-icon {
+    margin-top: 0.425em;
+    padding-left: 0.45em;
+}

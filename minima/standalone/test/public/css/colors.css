@@ -1,0 +1,28 @@
+.color-panel-1 {
+    background-color: #fff;
+}
+
+.color-panel-2 {
+    background-color: #eee;
+}
+
+.color-panel-3 {
+    background-color: #ddd;
+}
+
+.color-panel-4 {
+    background-color: #ccc;
+}
+
+.color-accent-background {
+    background-color: #1c78cf;
+    color: #fff;
+}
+
+.color-accent-text {
+    color: #1c78cf;
+}
+
+.color-transparent-text {
+    color: rgba(24,24,24,0.6);
+}

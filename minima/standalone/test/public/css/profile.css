@@ -1,0 +1,67 @@
+#profile-image {
+    position: relative;
+    width: 80%;
+    padding-bottom: 80%;
+    margin: 1.5rem auto 1.5rem auto;
+    border-radius: 1em 1em 1em 1em;
+    background-image: url(https://i.imgur.com/5cZaUXz.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+#profile-top-embellish {
+    position: absolute;
+    z-index: 98;
+    top: -5%;
+    right: -5%;
+    width: 40%;
+    height: 40%;
+}
+
+.profile-embellish {
+    z-index: 99;
+}
+
+#profile-embellish-wrapper {
+    margin-top: -4.25em;
+}
+
+#profile-embellish-base {
+
+}
+
+#profile-embellish-edge {
+    margin-left: -10%;
+    transform: skew(30deg, 0.0deg);
+}
+
+#profile-embellish-outer {
+    width: 5%;
+    margin-left: 5%;
+    transform: skew(30deg, 0.0deg);
+}
+
+#name-wrapper {
+    position: relative;
+    margin-top: -0.675em;
+    margin-left: 2em;
+    width: 65%;
+    font-size: 28pt;
+    line-height: 30pt;
+    text-indent: -2em;
+    z-index: 99;
+    text-shadow: -0.5px -1px 0 #ddd, 0.5px -1px 0 #ddd, 0.5px 0.5px 0 #ddd, -0.5px 0.5px 0 #ddd;
+}
+
+#name-initial-highlight {
+    font-weight: bold;
+}
+
+#name-title {
+    text-align: right;
+    font-size: 16pt;
+    margin-top: -8pt;
+    margin-bottom: 2pt;
+    color: rgba(24,24,24,0.6);
+}

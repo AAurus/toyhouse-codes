@@ -1,0 +1,21 @@
+.quote-header {
+    margin-top: 0.5em;
+    border-left: none;
+    text-align: center;
+    font-size: 16pt;
+}
+
+.quote-subtext {
+    font-size: 10pt;
+}
+
+.quote-separator {
+    margin-bottom: 0;
+}
+
+.page {
+}
+
+.page-content h1 {
+    font-size: 20pt;
+}
