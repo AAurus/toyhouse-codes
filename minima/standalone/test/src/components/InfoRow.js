@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import {Icon} from './Icon.js';
 
 export class AllInfoRows extends React.Component {
@@ -7,7 +6,7 @@ export class AllInfoRows extends React.Component {
     render(props) {
 
         return  <>
-                    {this.props.items.map((item) => <InfoRow icon={item.icon} content={item.content}/>)}
+                    {this.props.items.map((item) => <InfoRow icon={item.icon} content={item.content} key={item.content}/>)}
                 </>;
 
     }

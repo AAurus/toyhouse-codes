@@ -1,11 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import {AllInfoRows} from './InfoRow.js';
 import {Name} from './Name.js';
 
 export class BriefColumn extends React.Component {
 
-    render() {
+    render(props) {
 
         return  <>
                     <div id="profile-image">
@@ -13,37 +12,8 @@ export class BriefColumn extends React.Component {
                         </div>
                     </div>
                     <ProfilePhotoEmbellishment />
-                    <Name name="name lastname" title="title"/>
-                    <AllInfoRows items={[
-                        {
-                            icon: 'signature',
-                            content: 'Nicknames and Aliases'
-                        },
-                        {
-                            icon: 'venus-mars',
-                            content: 'Gender (Pronouns)'
-                        },
-                        {
-                            icon: 'heart',
-                            content: 'Sexual + Romantic Orientation'
-                        },
-                        {
-                            icon: 'clock',
-                            content: 'Age'
-                        },
-                        {
-                            icon: 'dna',
-                            content: 'Species / Race'
-                        },
-                        {
-                            icon: 'briefcase',
-                            content: 'Occupation'
-                        },
-                        {
-                            icon: 'earth',
-                            content: 'Nationality'
-                        }
-                    ]}/>
+                    <Name name={this.props.data.get("name")} title={this.props.data.get("title")}/>
+                    <AllInfoRows items={this.props.data.get("infoRows")}/>
                 </>;
 
     }

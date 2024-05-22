@@ -1,25 +1,44 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import {FullBlockText} from './page/BlockText.js';
+import {PageRenderer} from '../model/render/PageRenderer.js';
 
 export class Page extends React.Component {
 
     render(props) {
 
+        let pageRenderer = new PageRenderer();
+
+        console.log(this.props);
+
         let activeTags = "";
 
         if (this.props.active) {
-            activeTags = "show active"
+            activeTags = " show active"
         }
 
-        return  <div id={this.props.link} class={"tab-pane fade page " + activeTags} role="tabpanel">
+        return  <div id={this.props.link} class={"tab-pane fade page" + activeTags} role="tabpanel">
                     <Quote quoteText={this.props.quoteText} contextText={this.props.contextText} />
                     <div class="page-content">
-                        <FullBlockText title="profile" content="aaf"/>
-                        <FullBlockText content="aaf"/>
+                        {this.renderBody(this.props.raw, pageRenderer)}
                     </div>
+
+                    <div class="py-4 my-4 py-lg-3 my-lg-1"></div>
                 </div>;
 
+    }
+
+    renderBody(raw,renderer) {
+
+        let chunks = raw.split(/(?:\r?\n)+\r?\n/);
+        console.log("CHUNKS: ");
+        console.log(chunks);
+        return chunks.map((chunk) => {return this.renderBodyChunk(chunk, renderer)});
+
+    }
+
+    renderBodyChunk(chunk, renderer) {
+        return  <>
+                    {renderer.parseRaw(chunk)}
+                </>
     }
 }
 

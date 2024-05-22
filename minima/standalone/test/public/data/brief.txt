@@ -1,0 +1,17 @@
+Firstname Lastname
+Title Here
+---
+a:C Nicknames and Aliases
+b:C Gender (Pronouns)
+c:C Sexual + Romantic Orientation
+d:C Age
+e:C Species / Race
+f:C Occupation
+g:C Nationality
+---
+profile:home
+refs:id-badge
+combat:chess-knight
+stats:chart-bar
+relationships:users
+story:book-open
