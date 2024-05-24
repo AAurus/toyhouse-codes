@@ -1,40 +1,25 @@
 import React from 'react';
-import {FullBlockText, Title, TraitList} from '../../components/page/TextBlocks.js';
+import BlockRule from './rules/BlockRule.js';
+import TraitListRule from './rules/TraitListRule.js';
+import TitleRule from './rules/TitleRule.js';
 
 export class PageRenderer {
 
     parseRaw (input) {
         let raw = input.trim();
 
-        const traitListRegex = /^\[TRAITLIST\|(.+,)*(.+)\]/;
-        const headerRegex = /^# .+/;
+        const rules = [
+            new TraitListRule(),
+            new TitleRule(),
+            new BlockRule()
+        ];
 
-        let match = raw.match(traitListRegex);
-        if (match) {
-            return  <>
-                        {this.parseTraitList(match[0].slice(11, match[0].length-1))}
-                    </>;
-        } else {
-            let header = raw.match(headerRegex);
-            if (header) {
-                return  <>
-                            <Title content={header[0].replace("# ", "")} />
-                            {this.parseRaw(raw.replace(header[0], ""))}
-                        </>;
+        for (let i = 0; i < rules.length; i++) {
+            if (rules[i].match(raw)) {
+                return (rules[i].render(raw));
             }
         }
-        return  <>
-                    <FullBlockText content={raw} />
-                    <br/>
-                </>;
-    }
 
-    parseTraitList (matched) {
-        let list = matched.split(",");
-        return  <>
-                    <TraitList traits={list} />
-                    <br/>
-                </>;
     }
 
 }
