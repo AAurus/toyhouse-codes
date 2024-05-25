@@ -20,7 +20,7 @@ export class EmbedImage extends React.Component {
             direction = this.props.direction;
         }
 
-        return  <div class={"pt-2 pb-1 w-25 text-center color-panel-2 embed-image float-" + direction}>
+        return  <div class={"pt-2 pb-1 mt-1 w-25 text-center color-panel-2 embed-image float-" + direction}>
                     <img class="w-100" src={this.props.src} alt={alt}></img>
                     { this.addCaption() }
                 </div>;
@@ -28,9 +28,9 @@ export class EmbedImage extends React.Component {
 
     addCaption() {
         console.log(this.props);
-        if (this.props.imgCaption) {
+        if (this.props.caption) {
             return  <div class="text-left mx-2">
-                        {this.props.imgCaption}
+                        {this.props.caption}
                     </div>
         }
         return null;
