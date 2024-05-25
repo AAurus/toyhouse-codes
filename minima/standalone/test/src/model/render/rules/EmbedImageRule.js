@@ -1,19 +1,20 @@
 import React from "react";
 
-import {Title} from '../../../components/page/TextBlocks.js';
+import {EmbedImage} from '../../../components/page/ImageBlocks.js';
 import BlockRule from "./BlockRule.js";
 
-export default class TitleRule extends BlockRule {
+export default class EmbedImageRule extends BlockRule {
 
-    pattern = /^(# .+)([\s\S]*)/;
+    pattern = /^(?:\[IMAGE\|(.+)\])\r?\n(.*)/;
 
     render (raw, renderer) {
         let matched = this.match(raw);
         if (matched) {
-            let parsed = matched[1].replace("# ", "");
+            let parsed = matched[1];
+            let parsedList = parsed.split("|");
             let body = matched[2].trim();
             return  <>
-                        <Title content={parsed} />
+                        <EmbedImage src={parsedList[0]} direction="right" imgCaption="caption"/>
                         {renderer.parseRaw(body)}
                     </>;
         }

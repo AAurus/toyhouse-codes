@@ -14,13 +14,13 @@ export default class BlockRule {
         return str.match(this.pattern);
     }
 
-    render(raw) {
+    render(raw, renderer) {
         if (raw == "") {
             return <br/>;
         }
-        return <div class="mb-3">
+        return <>
                    <FullBlockText content={raw} />
-               </div>;
+               </>;
     }
 
 }

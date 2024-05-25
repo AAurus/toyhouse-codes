@@ -29,15 +29,13 @@ export class Page extends React.Component {
     renderBody(raw,renderer) {
 
         let chunks = raw.split(/(?:\r?\n)+\r?\n/);
-        console.log("CHUNKS: ");
-        console.log(chunks);
         return chunks.map((chunk) => {return this.renderBodyChunk(chunk, renderer)});
 
     }
 
     renderBodyChunk(chunk, renderer) {
         return  <>
-                    {renderer.parseRaw(chunk)}
+                    {renderer.parseRawBlock(chunk)}
                 </>
     }
 }
