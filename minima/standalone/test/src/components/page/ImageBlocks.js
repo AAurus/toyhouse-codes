@@ -43,7 +43,7 @@ export class SmallIconImage extends React.Component {
 
     render(props) {
         return  <div class="w-20 p-0">
-                    <div class="square-inner image color-panel-2">
+                    <div class="square-inner image color-panel-2" style={{backgroundImage: `url(${this.props.src})`}}>
                     </div>
                     <div class="mr-2 mr-lg-1 color-panel-3 image-embellish">
                     </div>

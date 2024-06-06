@@ -53,11 +53,11 @@
 .image-embellish {
     position: relative;
     z-index: 90;
-    margin-top: -16%;
+    margin-top: -12%;
     margin-left: auto;
-    margin-right: 12%;
-    width: 15%;
-    padding-bottom: 24%;
+    margin-right: 8%;
+    width: 10%;
+    padding-bottom: 18%;
     bottom: 0%;
     transform: skew(30deg, .0deg);
 }
