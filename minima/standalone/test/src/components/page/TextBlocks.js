@@ -1,4 +1,5 @@
 import React from 'react';
+import { SmallIconImage } from './ImageBlocks.js';
 
 export class FullBlockText extends React.Component {
 
@@ -48,6 +49,23 @@ export class TraitList extends React.Component {
                         </>)
                     }
                 </>;
+    }
+
+}
+
+export class RelationshipBlock extends React.Component {
+
+    render(props) {
+        return  <div class="col-12">
+                    <div class="row ps-3">
+                        <SmallIconImage />
+                        <div class="col">
+                            <Title content={this.props.name}/>
+                            <p class="color-transparent-text">{this.props.status}</p>
+                            <FullBlockText content={this.props.content}/>
+                        </div>
+                    </div>
+                </div>;
     }
 
 }

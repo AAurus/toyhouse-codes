@@ -7,7 +7,7 @@ export class BriefColumn extends React.Component {
     render(props) {
 
         return  <>
-                    <div id="profile-image">
+                    <div id="profile-image" class="color-panel-2">
                         <div class="color-panel-3" id="profile-top-embellish">
                         </div>
                     </div>

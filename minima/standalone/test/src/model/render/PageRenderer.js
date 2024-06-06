@@ -3,6 +3,7 @@ import BlockRule from './rules/BlockRule.js';
 import TraitListRule from './rules/TraitListRule.js';
 import TitleRule from './rules/TitleRule.js';
 import EmbedImageRule from './rules/EmbedImageRule.js';
+import RelationshipBlockRule from './rules/RelationshipBlockRule.js';
 
 export class PageRenderer {
 
@@ -11,8 +12,9 @@ export class PageRenderer {
 
         const rules = [
             new TitleRule(),
-            new TraitListRule(),
             new EmbedImageRule(),
+            new TraitListRule(),
+            new RelationshipBlockRule(),
             new BlockRule()
         ];
 
