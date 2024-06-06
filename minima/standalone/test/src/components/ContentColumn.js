@@ -7,7 +7,7 @@ export class ContentColumn extends React.Component {
 
     render(props) {
 
-        console.log(this.props.data);
+//        console.log(this.props.data);
 
         return  <div class="flex-column" id="content-panel-wrapper">
                     <PaletteLine colors={['#024', '#046', '#068', '#08a', '#0ac', '#0ce']} />

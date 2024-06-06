@@ -1,17 +1,17 @@
 Firstname Lastname
 Title Here
 ---
-a:C Nicknames and Aliases
-b:C Gender (Pronouns)
-c:C Sexual + Romantic Orientation
-d:C Age
-e:C Species / Race
-f:C Occupation
-g:C Nationality
+signature:C Nicknames and Aliases
+gender-transgender:C Gender (Pronouns)
+heart:C Sexual + Romantic Orientation
+clock:C Age
+dna:C Species / Race
+briefcase:C Occupation
+earth:C Nationality
 ---
 profile:home
-refs:id-badge
-combat:chess-knight
+refs:account-box-outline
+combat:sword-cross
 stats:chart-bar
-relationships:users
-story:book-open
+relationships:account-group
+story:book-open-blank-variant

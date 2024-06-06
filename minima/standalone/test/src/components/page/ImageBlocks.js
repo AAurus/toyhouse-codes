@@ -29,7 +29,6 @@ export class EmbedImage extends React.Component {
     }
 
     addCaption() {
-        console.log(this.props);
         if (this.props.caption) {
             return  <div class="text-left mx-2">
                         {this.props.caption}

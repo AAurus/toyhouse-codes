@@ -7,7 +7,7 @@ export class Page extends React.Component {
 
         let pageRenderer = new PageRenderer();
 
-        console.log(this.props);
+//        console.log(this.props);
 
         let activeTags = "";
 

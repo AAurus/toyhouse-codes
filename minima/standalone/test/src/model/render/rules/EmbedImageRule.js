@@ -22,7 +22,6 @@ export default class EmbedImageRule extends BlockRule {
     }
 
     parseImage(parsedList) {
-        console.log(parsedList);
         let direction, link, alt, caption;
         let textEntryOffset = 1;
 

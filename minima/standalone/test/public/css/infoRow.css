@@ -37,6 +37,7 @@
 }
 
 .info-row-icon {
-    margin-top: 0.425em;
+    position: relative;
+    top: 0.125em;
     padding-left: 0.45em;
 }
