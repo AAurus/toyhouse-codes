@@ -4,6 +4,7 @@ import TraitListRule from './rules/TraitListRule.js';
 import TitleRule from './rules/TitleRule.js';
 import EmbedImageRule from './rules/EmbedImageRule.js';
 import RelationshipBlockRule from './rules/RelationshipBlockRule.js';
+import StatBlockRule from './rules/StatBlockRule.js';
 
 export class PageRenderer {
 
@@ -14,6 +15,7 @@ export class PageRenderer {
             new TitleRule(),
             new EmbedImageRule(),
             new TraitListRule(),
+            new StatBlockRule(),
             new RelationshipBlockRule(),
             new BlockRule()
         ];

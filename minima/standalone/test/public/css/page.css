@@ -47,6 +47,7 @@
 .image {
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 1em 1em;
 }
 
@@ -60,4 +61,8 @@
     padding-bottom: 18%;
     bottom: 0%;
     transform: skew(30deg, .0deg);
+}
+
+.stat-item-endcap {
+    border-radius: 0 50% 50% 0;
 }

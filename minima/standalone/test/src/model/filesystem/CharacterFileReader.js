@@ -5,6 +5,7 @@ export class CharacterFileReader {
 
     name = "";
     title = "";
+    imageURL = "";
     infoRowItems = [];
     pages = [];
     pagesReady = 0;
@@ -32,6 +33,7 @@ export class CharacterFileReader {
 
         this.name = nameArray[0];
         this.title = nameArray[1];
+        this.imageURL = nameArray[2];
 
         infoRowArray.map((raw) => this.#addInfoRow(raw));
         pagesArray.map((raw) => this.#addPage(raw));
@@ -41,6 +43,7 @@ export class CharacterFileReader {
         let result = new Map();
         result.set("name", this.name);
         result.set("title", this.title);
+        result.set("imageURL", this.imageURL);
         result.set("infoRows", this.infoRowItems);
         return result;
     }

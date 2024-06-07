@@ -1,17 +1,18 @@
-Firstname Lastname
-Title Here
+aera crescenada
+bamboo cutter
+https://f2.toyhou.se/file/f2-toyhou-se/characters/21408080?1683275401
 ---
-signature:C Nicknames and Aliases
-gender-transgender:C Gender (Pronouns)
-heart:C Sexual + Romantic Orientation
-clock:C Age
-dna:C Species / Race
-briefcase:C Occupation
-earth:C Nationality
+signature:Aera
+gender-transgender:Agender (They/She/He)
+heart-outline:C Sexual + Romantic Orientation
+clock-outline:3000+
+dna:Elytrian/Automagi
+briefcase-outline:Mechanic
+earth:Overworld
 ---
-profile:home
+profile:home-outline
 refs:account-box-outline
 combat:sword-cross
 stats:chart-bar
 relationships:account-group
-story:book-open-blank-variant
+story:book-open-blank-variant-outline

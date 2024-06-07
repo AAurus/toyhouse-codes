@@ -1,6 +1,6 @@
 import React from "react";
 
-import { RelationshipBlock } from '../../../components/page/TextBlocks.js';
+import RelationshipBlock from '../../../components/page/RelationshipBlock.js';
 import BlockRule from "./BlockRule.js";
 
 export default class RelationshipBlockRule extends BlockRule {
