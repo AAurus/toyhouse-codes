@@ -1,11 +1,11 @@
 import React from "react";
 
-import {EmbedImage} from '../../../components/page/ImageBlocks.js';
+import { EmbedImage } from '../../../components/page/ImageBlocks.js';
 import BlockRule from "./BlockRule.js";
 
 export default class EmbedImageRule extends BlockRule {
 
-    pattern = /^(?:\[IMAGE\|(.+)\])([\s\S]*)/;
+    pattern = /^(?:\[IMAGE\|(.+)\])([\s\S]+?)(?:(\r?\n)|$)/;
 
     render (raw, renderer) {
         let matched = this.match(raw);
@@ -13,9 +13,10 @@ export default class EmbedImageRule extends BlockRule {
             let parsed = matched[1];
             let parsedList = parsed.split("|");
             let body = matched[2].trim();
+            let result = renderer.parseRaw(body);
             return  <>
-                        {this.generateImage(this.parseImage(parsedList))}
-                        {renderer.parseRaw(body)}
+                        {this.parseImage(parsedList)}
+                        {result}
                     </>;
         }
         return super.render(raw);
@@ -44,19 +45,10 @@ export default class EmbedImageRule extends BlockRule {
             }
         }
 
-        return  {
-                    direction: direction,
-                    link: link,
-                    alt: alt,
-                    caption: caption
-                };
-    }
-
-    generateImage(imageObject) {
-        return <EmbedImage  src={imageObject.link}
-                            direction={imageObject.direction}
-                            alt={imageObject.alt}
-                            caption={imageObject.caption} />;
+        return  <EmbedImage src={link}
+                            direction={direction}
+                            alt={alt}
+                            caption={caption} />;
     }
 
 }

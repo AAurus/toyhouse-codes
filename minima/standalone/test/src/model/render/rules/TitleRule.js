@@ -5,16 +5,17 @@ import BlockRule from "./BlockRule.js";
 
 export default class TitleRule extends BlockRule {
 
-    pattern = /^(# .+)([\s\S]*)/;
+    pattern = /^(# .+)(?:\r?\n)([\s\S]*?)(?:(\r?\n)|$)/;
 
     render (raw, renderer) {
         let matched = this.match(raw);
         if (matched) {
             let parsed = matched[1].replace("# ", "");
-            let body = matched[2].trim();
+            let body = matched[2];
+            let result = renderer.parseRaw(body);
             return  <>
                         <Title content={parsed} />
-                        {renderer.parseRaw(body)}
+                        {result}
                     </>;
         }
         return super.render(raw);

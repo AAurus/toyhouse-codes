@@ -5,7 +5,7 @@ import BlockRule from "./BlockRule.js";
 
 export default class RelationshipBlockRule extends BlockRule {
 
-    pattern = /^(?:\[RELATIONSHIP\|(.+)\])([\s\S]*)/;
+    pattern = /^(?:\[RELATIONSHIP\|(.+)\])([\s\S]*?)(?:(\r?\n)|$)/;
 
     render (raw, renderer) {
         let matched = this.match(raw);

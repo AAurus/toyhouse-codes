@@ -12,7 +12,6 @@ export default class StatBlockRule extends BlockRule {
         if (matched) {
             let parsed = matched[1].trim();
             let list = parsed.split(/\r?\n/);
-            console.log(list);
             return  <div class="col-12">
                         {list.map((item) => (this.parseStatItem(item)))}
                     </div>;

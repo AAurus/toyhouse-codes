@@ -4,14 +4,15 @@ import {FullBlockText} from '../../../components/page/TextBlocks.js';
 
 export default class BlockRule {
 
-    pattern = /^.*/;
+    pattern = /^.+?/;
 
     constructor() {
 
     }
 
     match(str) {
-        return str.match(this.pattern);
+        let terminator = /(?:(\r?\n)+|$)/;
+        return str.match(new RegExp(this.pattern.source + terminator.source));
     }
 
     render(raw, renderer) {

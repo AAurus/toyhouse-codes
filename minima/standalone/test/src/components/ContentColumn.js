@@ -23,7 +23,6 @@ export class ContentColumn extends React.Component {
 
     addPage(page) {
         if (page.selected) {
-            console.log(page);
             return <Page link={page.name} quoteText="Text Here" contextText="describe context here" active={true} raw={page.raw}/>
         }
         return <Page link={page.name} quoteText="Text Here" contextText="describe context here" raw={page.raw}/>;

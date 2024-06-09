@@ -28,8 +28,10 @@ export class Page extends React.Component {
 
     renderBody(raw,renderer) {
 
-        let chunks = raw.split(/(?:\r?\n)+\r?\n/);
-        return chunks.map((chunk) => {return this.renderBodyChunk(chunk, renderer)});
+//        let chunks = raw.split(/(?:\r?\n)+\r?\n/);
+//        return chunks.map((chunk) => {return this.renderBodyChunk(chunk, renderer)});
+
+        return renderer.parseRawFull(raw);
 
     }
 

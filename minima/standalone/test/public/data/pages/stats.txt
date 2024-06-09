@@ -1,15 +1,65 @@
+[BLOCK]
+[6]
 # personal details
 [STATBLOCK]
 t) name: name lastname
-s) zero: 0
-s) one: 1
-s) two: 2
-s) three: 3
-s) four: 4
-s) five: 5
-s) six: 6
-s) seven: 7
-s) eight: 8
-s) nine: 9
-s) ten: 10
+t) date of birth: mm/dd/yyyy
+t) gender identity: gender
+t) nation of origin: nation
+t) sexual orientation: orientation
+t) romantic orientation: orientation
+t) relationship status: status
 [/STATBLOCK]
+[/6]
+[6]
+# personality
+[STATBLOCK]
+t) enneatype: 0w0
+t) myers-briggs type: xxxx
+s) neuroticism: 5
+s) extraversion: 5
+s) openness: 5
+s) agreeableness: 5
+s) conscientiousness: 5
+[/STATBLOCK]
+[/6]
+[/BLOCK]
+
+[BLOCK]
+[4]
+# body
+[STATBLOCK]
+t) height: 0cm
+t) weight: 0kg
+t) build: build
+t) apparent age: 0
+t) species: species
+t) sub-species: race
+[/STATBLOCK]
+[/4]
+[8]
+# combat
+[BLOCK2]
+[6]
+[STATBLOCK]
+t) combat role: role
+t) sub-role: role
+s) damage: 5
+s) range: 5
+s) precision: 5
+s) attack rate: 5
+[/STATBLOCK]
+[/6]
+[6]
+[STATBLOCK]
+s) defense: 5
+s) mobility: 5
+s) stealth: 5
+s) speed: 5
+s) awareness: 5
+s) leadership: 5
+[/STATBLOCK]
+[/6]
+[/BLOCK2]
+[/8]
+[/BLOCK]
