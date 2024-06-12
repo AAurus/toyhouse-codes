@@ -17,7 +17,7 @@ export class Page extends React.Component {
 
         return  <div id={this.props.link} class={"tab-pane fade page" + activeTags} role="tabpanel">
                     <Quote quoteText={this.props.quoteText} contextText={this.props.contextText} />
-                    <div class="page-content">
+                    <div class="page-content mx-5 mx-lg-0">
                         {this.renderBody(this.props.raw, pageRenderer)}
                     </div>
 
@@ -27,12 +27,7 @@ export class Page extends React.Component {
     }
 
     renderBody(raw,renderer) {
-
-//        let chunks = raw.split(/(?:\r?\n)+\r?\n/);
-//        return chunks.map((chunk) => {return this.renderBodyChunk(chunk, renderer)});
-
         return renderer.parseRawFull(raw);
-
     }
 
     renderBodyChunk(chunk, renderer) {

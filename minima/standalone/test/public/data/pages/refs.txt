@@ -1,0 +1,22 @@
+[BLOCK]
+[6]
+# front
+[IMG_PORTRAIT|https://i.imgur.com/5tu4VZ6.png]
+[/6]
+[6]
+# back
+[IMG_PORTRAIT|https://i.imgur.com/5tu4VZ6.png]
+[/6]
+[/BLOCK]
+# details
+[BLOCK]
+[4S]
+[IMG_SMALL|https://i.imgur.com/5tu4VZ6.png]
+[/4S]
+[4S]
+[IMG_SMALL|https://i.imgur.com/5tu4VZ6.png]
+[/4S]
+[4S]
+[IMG_SMALL|https://i.imgur.com/5tu4VZ6.png]
+[/4S]
+[/BLOCK]

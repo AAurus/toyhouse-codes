@@ -3,6 +3,8 @@ import BlockRule from './rules/BlockRule.js';
 import TraitListRule from './rules/TraitListRule.js';
 import TitleRule from './rules/TitleRule.js';
 import EmbedImageRule from './rules/EmbedImageRule.js';
+import PortraitImageRule from './rules/PortraitImageRule.js';
+import { LargeSquareImageRule, SmallSquareImageRule } from './rules/SquareImageRule.js';
 import RelationshipBlockRule from './rules/RelationshipBlockRule.js';
 import StatBlockRule from './rules/StatBlockRule.js';
 import DivisionRule from './rules/DivisionRule.js';
@@ -10,12 +12,15 @@ import DivisionRule from './rules/DivisionRule.js';
 export class PageRenderer {
 
     rules = [
+        new DivisionRule(),
         new TitleRule(),
         new EmbedImageRule(),
+        new PortraitImageRule(),
+        new LargeSquareImageRule(),
+        new SmallSquareImageRule(),
         new TraitListRule(),
         new StatBlockRule(),
         new RelationshipBlockRule(),
-        new DivisionRule(),
         new BlockRule()
     ];
 
@@ -45,15 +50,12 @@ export class PageRenderer {
                 let match = this.rules[i].match(parse);
                 if (match) {
                     let component = this.rules[i].render(match[0], this);
-                    render.push(component);
-                    render.push(<br/>);
+                    render.push(<div class="mb-3">{component}</div>);
                     parse = parse.replace(match[0], "").trim();
                     break;
                 }
             }
         }
-        render.pop();
-        render.push(<div style={{height: 5 + "pt"}}></div>);
         return render;
     }
 

@@ -5,14 +5,14 @@ import BlockRule from "./BlockRule.js";
 
 export default class EmbedImageRule extends BlockRule {
 
-    pattern = /^(?:\[IMAGE\|(.+)\])([\s\S]+?)(?:(\r?\n)|$)/;
+    pattern = /^(?:\[IMG_EMBED\|(.+)\])([\s\S]+?)?(?:(\r?\n)|$)/;
 
     render (raw, renderer) {
         let matched = this.match(raw);
         if (matched) {
             let parsed = matched[1];
             let parsedList = parsed.split("|");
-            let body = matched[2].trim();
+            let body = matched[2];
             let result = renderer.parseRaw(body);
             return  <>
                         {this.parseImage(parsedList)}

@@ -19,7 +19,7 @@ export class Title extends React.Component {
         if (this.props.content) {
             let titleFirst = this.props.content[0];
             let titleRest = this.props.content.substring(1);
-            return <h1>
+            return <h1 class={"mt-3 mt-lg-0 " + this.props.class}>
                        <span class="color-accent-text">{titleFirst}</span>{titleRest}
                    </h1>;
         }

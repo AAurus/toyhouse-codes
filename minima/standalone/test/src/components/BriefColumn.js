@@ -6,7 +6,8 @@ export class BriefColumn extends React.Component {
 
     render(props) {
         return  <>
-                    <div id="profile-image" class="color-panel-2 image" style={{backgroundImage: `url(${this.props.data.get("imageURL")})`}}>
+                    <div id="profile-image" class="color-panel-2 square-inner image-wrapper">
+                        <img class="image" src={this.props.data.get("imageURL")}></img>
                         <div id="profile-top-embellish">
                             <ProfilePhotoEmbellishmentIcon />
                         </div>

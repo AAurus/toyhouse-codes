@@ -5,9 +5,9 @@ import BlockRule from "./BlockRule.js";
 
 export default class DivisionRule extends BlockRule {
 
-    pattern = /^\[(BLOCK\d*)\](?:[\s\S])+?\[\/\1\]/;
-    outerBlockPattern = /(\[(\d*)\](?:[\s\S])+?\[\/\2\])/g;
-    innerBlockPattern = /\[(\d*)\]([\s\S]+)\[\/\1\]/;
+    pattern = /^\[(BLOCK\d*S?)\](?:[\s\S])+?\[\/\1\]/;
+    outerBlockPattern = /(\[(\d*S?)\](?:[\s\S])+?\[\/\2\])/g;
+    innerBlockPattern = /\[(\d*S?)\]([\s\S]+)\[\/\1\]/;
 
     render (raw, renderer) {
         let parse = raw;
@@ -15,7 +15,6 @@ export default class DivisionRule extends BlockRule {
         if (match) {
             let matched = parse.match(this.outerBlockPattern);
             console.log(matched);
-            console.log(parse);
             parse = parse.replace(this.outerBlockPattern,"%").trim();
             return  <div class="row">
                         {this.renderResult(parse.split(/(?:\r?\n)/), matched, renderer)}
@@ -51,11 +50,19 @@ export default class DivisionRule extends BlockRule {
     renderBlock (raw, renderer) {
         let matched = raw.match(this.innerBlockPattern);
         if (matched) {
-            let size = Math.max(1, Math.min(12, matched[1]));
+            let size = Math.max(1, Math.min(12, matched[1].charAt(0)));
             let content = matched[2].trim();
+            console.log(content);
 
-            return  <div class={"m-0 col-12 col-lg-" + size}>
-                        {renderer.parseRaw(content)}
+            if (matched[1].charAt(1)) {
+                return  <div class={"col-" + size}>
+                            {renderer.parseRawFull(content)}
+                            <div style={{marginBottom: "-3pt"}}></div>
+                        </div>;
+            }
+
+            return  <div class={"col-12 col-lg-" + size}>
+                        {renderer.parseRawFull(content)}
                         <div style={{marginBottom: "-3pt"}}></div>
                     </div>;
         }
