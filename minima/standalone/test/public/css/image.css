@@ -10,7 +10,12 @@
     aspect-ratio: 10 / 13;
 }
 
+.banner-inner {
+    aspect-ratio: 4 / 1;
+}
+
 .image-wrapper {
+    position: relative;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,15 +29,29 @@
 }
 
 .image-embellish {
+    --size: 1;
     position: relative;
     z-index: 90;
-    margin-top: -12%;
+    margin-top: calc(-12pt * var(--size));
     margin-left: auto;
-    margin-right: 8%;
-    width: 10%;
-    padding-bottom: 18%;
+    margin-right: calc(8pt * var(--size));
+    width: calc(10pt * var(--size));
+    padding-bottom: calc(18pt * var(--size));
     bottom: 0%;
     transform: skew(30deg, .0deg);
+}
+
+.icon-underlap {
+    position: absolute;
+    font-size: 100pt;
+    bottom: -40pt;
+    right: -15pt;
+    padding-left: 2pt;
+    transform: rotate(30deg);
+}
+
+.large-embellish {
+    --size: 2;
 }
 
 .fit-cover {
@@ -41,4 +60,9 @@
 
 .fit-contain {
     object-fit: contain;
+}
+
+.title-overlap {
+    position: absolute;
+    top: 0.25rem;
 }

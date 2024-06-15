@@ -43,7 +43,7 @@ export class Quote extends React.Component {
 
         return  <blockquote class="quote-header">
                     "{this.props.quoteText}"
-                    <p class="quote-subtext color-transparent-text">
+                    <p class="quote-subtext color-text-transparent-1">
                         — {this.props.contextText} —
                     </p>
                     <hr class="quote-separator"></hr>

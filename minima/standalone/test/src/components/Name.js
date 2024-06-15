@@ -9,7 +9,7 @@ export class Name extends React.Component {
 
         return  <>
                     <div id="name-wrapper">
-                        <span class="color-accent-text" id="name-initial-highlight">{first}</span>{rest}
+                        <span class="color-text-accent" id="name-initial-highlight">{first}</span>{rest}
                     </div>
                     <div class="mx-5" id="name-title">
                         {this.props.title}

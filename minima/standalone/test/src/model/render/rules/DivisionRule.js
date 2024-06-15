@@ -5,7 +5,7 @@ import BlockRule from "./BlockRule.js";
 
 export default class DivisionRule extends BlockRule {
 
-    pattern = /^\[(BLOCK\d*S?)\](?:[\s\S])+?\[\/\1\]/;
+    pattern = /^\[(BLOCK\d*)\](?:[\s\S])+?\[\/\1\]/;
     outerBlockPattern = /(\[(\d*S?)\](?:[\s\S])+?\[\/\2\])/g;
     innerBlockPattern = /\[(\d*S?)\]([\s\S]+)\[\/\1\]/;
 
@@ -54,7 +54,7 @@ export default class DivisionRule extends BlockRule {
             let content = matched[2].trim();
             console.log(content);
 
-            if (matched[1].charAt(1)) {
+            if (matched[1].charAt(1) === 'S') {
                 return  <div class={"col-" + size}>
                             {renderer.parseRawFull(content)}
                             <div style={{marginBottom: "-3pt"}}></div>

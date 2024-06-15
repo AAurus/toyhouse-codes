@@ -21,9 +21,9 @@ export class InfoRow extends React.Component {
                     </div>
                     <div class="info-button-hollow-edge color-panel-1">
                     </div>
-                    <div class="info-button-base color-accent-background">
+                    <div class="info-button-base color-background-accent">
                     </div>
-                    <div class="info-button-edge color-accent-background">
+                    <div class="info-button-edge color-background-accent">
                     <Icon class="info-row-icon" icon={this.props.icon}/>
                     </div>
                     <div class="info-row-content">{this.props.content}</div>

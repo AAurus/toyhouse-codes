@@ -14,18 +14,23 @@
     background-color: #ccc;
 }
 
-.color-accent-background {
+.color-background-accent {
     background-color: #1c78cf;
     color: #fff;
     stroke: #fff;
 }
 
-.color-accent-text {
+.color-text-accent {
     color: #1c78cf;
     stroke: #1c78cf;
 }
 
-.color-transparent-text {
+.color-text-transparent-1 {
     color: rgba(24,24,24,0.6);
     stroke: rgba(24,24,24,0.6);
+}
+
+.color-text-transparent-2 {
+    color: rgba(24,24,24,0.2);
+    stroke: rgba(24,24,24,0.2);
 }

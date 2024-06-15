@@ -21,7 +21,7 @@ class MenuItem extends React.Component {
         }
 
         return <li class="col-lg col-4 nav-item menu-item" role="presentation">
-            <a class={"nav-link color-accent-text " + activeTag} data-toggle="pill" role="tab"
+            <a class={"nav-link color-text-accent " + activeTag} data-toggle="pill" role="tab"
                     data-bs-toggle="tab" data-bs-target={'#' + this.props.page.name}
                     aria-controls={this.props.page.name} aria-selected={ariaSelected}>
                 <Icon icon={this.props.page.icon}/>

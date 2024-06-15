@@ -6,6 +6,8 @@ import EmbedImageRule from './rules/EmbedImageRule.js';
 import PortraitImageRule from './rules/PortraitImageRule.js';
 import { LargeSquareImageRule, SmallSquareImageRule } from './rules/SquareImageRule.js';
 import RelationshipBlockRule from './rules/RelationshipBlockRule.js';
+import EquipmentBlockRule from './rules/EquipmentBlockRule.js';
+import FeatureBlockRule from './rules/FeatureBlockRule.js';
 import StatBlockRule from './rules/StatBlockRule.js';
 import DivisionRule from './rules/DivisionRule.js';
 
@@ -21,6 +23,8 @@ export class PageRenderer {
         new TraitListRule(),
         new StatBlockRule(),
         new RelationshipBlockRule(),
+        new EquipmentBlockRule(),
+        new FeatureBlockRule(),
         new BlockRule()
     ];
 

@@ -13,7 +13,7 @@ export class PortraitImage extends React.Component {
                     <div class="portrait-inner image-wrapper color-panel-2">
                         <img class="image fit-contain" src={this.props.src} alt={alt}></img>
                     </div>
-                    <div class="me-4 me-lg-1 color-panel-3 image-embellish">
+                    <div class="me-4 me-lg-1 color-panel-3 image-embellish large-embellish">
                     </div>
                 </div>;
     }

@@ -21,6 +21,10 @@
     font-size: 20pt;
 }
 
+.subtitle {
+    font-size: 16pt !important;
+}
+
 .embed-image {
     border-radius: 1rem;
 }
@@ -41,4 +45,9 @@
 
 .title-no-margin {
    margin-top: -0.25rem !important;
+}
+
+.feature-wrapper {
+    position: relative;
+    overflow: hidden;
 }
