@@ -10,7 +10,7 @@ export default class RelationshipBlock extends React.Component {
                         <SmallIconImage src={this.props.image}/>
                         <div class="col">
                             <Title content={this.props.name} class="title-no-margin"/>
-                            <p class="color-transparent-text">{this.props.status}</p>
+                            <p class="color-text-transparent-1">{this.props.status}</p>
                             <FullBlockText content={this.props.content}/>
                         </div>
                     </div>

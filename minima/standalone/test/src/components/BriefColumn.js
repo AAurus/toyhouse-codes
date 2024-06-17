@@ -26,7 +26,7 @@ class ProfilePhotoEmbellishment extends React.Component {
     render() {
 
         return  <div class="row" id="profile-embellish-wrapper">
-                    <div class="col-3 profile-embellish color-panel-4"><br/><br/></div>
+                    <div class="col-3 profile-embellish color-panel-4" id="profile-embellish-base"><br/><br/></div>
                     <div class="col-2 profile-embellish color-panel-4" id="profile-embellish-edge"></div>
                     <div class="profile-embellish color-panel-3" id="profile-embellish-outer"></div>
                 </div>;

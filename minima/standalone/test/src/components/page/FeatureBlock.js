@@ -5,8 +5,8 @@ import { Icon } from '../Icon.js';
 export default class FeatureBlock extends React.Component {
 
     render (props) {
-        return  <div class="my-1 feature-wrapper">
-                    <div class="ms-2 me-1 my-2">
+        return  <div class="mb-1 feature-wrapper">
+                    <div class="ms-2 me-1 mb-2">
                         <Title content={this.props.name} class="subtitle" />
                         {this.props.content}
                         <div class="icon-underlap">

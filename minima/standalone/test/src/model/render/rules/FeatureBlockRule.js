@@ -3,7 +3,8 @@ import React from "react";
 import FeatureBlock from '../../../components/page/FeatureBlock.js';
 import BlockRule from "./BlockRule.js";
 
-export default class RelationshipBlockRule extends BlockRule {
+////
+export default class FeatureBlockRule extends BlockRule {
 
     pattern = /^(?:\[FEATURE\|(.+)\])([\s\S]*?)(?:(\r?\n)|$)/;
 
@@ -13,7 +14,8 @@ export default class RelationshipBlockRule extends BlockRule {
             let parsed = matched[1];
             let parsedList = parsed.split("|");
             let body = matched[2].trim();
-            return  <FeatureBlock name={parsedList[0]} icon={parsedList[1]} content={renderer.parseRawFull(body)}/>;
+            let content = new BlockRule().render(body, renderer);
+            return  <FeatureBlock name={parsedList[0]} icon={parsedList[1]} content={content}/>;
         }
         return super.render(raw);
     }

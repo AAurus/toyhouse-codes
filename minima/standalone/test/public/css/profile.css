@@ -15,9 +15,6 @@
     transform: rotate(20deg);
 }
 
-.profile-embellish {
-    z-index: 99;
-}
 
 @keyframes spin {
     from {transform:rotate(0deg);}
@@ -38,8 +35,12 @@
     margin-top: -4.25em;
 }
 
-#profile-embellish-base {
+.profile-embellish {
+    z-index: 99;
+}
 
+#profile-embellish-base {
+    margin-left: -1.5rem;
 }
 
 #profile-embellish-edge {
